@@ -36,7 +36,7 @@ This is the optimal baseline, showing that it is a reasonably straightforward ta
 
 https://user-images.githubusercontent.com/40262130/150855093-4cdaa55b-7cad-4d5a-b5fa-9e482c6fe07e.mp4
 
-### Binarized Weights, Normalized Threshold $\\theta=1$
+### Binarized Weights, Normalized Threshold <img src="https://render.githubusercontent.com/render/math?math=\theta=1">
 The results become significantly unstable when binarizing weights.
 
 https://user-images.githubusercontent.com/40262130/150855727-9ccfcca2-8b48-48cc-b5df-0d17f367968c.mp4
@@ -45,12 +45,12 @@ A moving average over training iterations is used in an attempt to clean up the 
 
 https://user-images.githubusercontent.com/40262130/150855822-02d9177c-e08f-48f4-8753-d5c937e49c00.mp4
 
-### Binarized Weights, Large Threshold $\theta=50$
+### Binarized Weights, Large Threshold <img src="https://render.githubusercontent.com/render/math?math=\theta=50">
 Increasing the threshold of all neurons provides a higher dynamic range state-space. But increasing the threshold too high leads to the dead neuron problem. The animation below shows how spiking activity has been suppressed; the flat membrane potential is purely a result of the bias.
 
 https://user-images.githubusercontent.com/40262130/150856229-0a3ae7ce-5670-4545-b13c-06dd3ca992f3.mp4
 
-### Binarized Weights, Threshold Annealing $\theta: 5 \rightarrow 50$
+### Binarized Weights, Threshold Annealing <img src="https://render.githubusercontent.com/render/math?math=\theta: 5 \rightarrow 50">
 Now apply threshold annealing to use an evolving neuronal state-space to gradually lift spiking activity. This avoids the dead neuron problem in the large threshold case, and avoids the instability/memory leakage in the normalized threshold case.
 
 https://user-images.githubusercontent.com/40262130/150856483-f53f2156-4348-46da-9c0f-5f05f31cf677.mp4

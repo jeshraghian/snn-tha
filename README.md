@@ -30,12 +30,8 @@ The animated versions of the above figures are provided below, and can be reprod
 
 ## Animations
 
-### High Precision Weights, Normalized Threshold $$\theta=1$$
-$\theta$
-$$\theta$$
-```
-\theta
-```
+### High Precision Weights, Normalized Threshold <img src="https://render.githubusercontent.com/render/math?math=\theta=1">
+
 This is the optimal baseline, showing that it is a reasonably straightforward task to achieve.
 
 https://user-images.githubusercontent.com/40262130/150855093-4cdaa55b-7cad-4d5a-b5fa-9e482c6fe07e.mp4

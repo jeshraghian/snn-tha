@@ -26,8 +26,6 @@ Section 4 of the paper demonstrates the use of threshold annealing in a spike-ti
 
 <img src="https://user-images.githubusercontent.com/40262130/150854145-d90d61ed-c41b-4aea-ad16-e077044f4f90.png" width="800">
 
-![temporal_code](https://user-images.githubusercontent.com/40262130/150854145-d90d61ed-c41b-4aea-ad16-e077044f4f90.png)
-
 The animated versions of the above figures are provided below, and can be reproduced in the corresponding notebook.
 
 ## Animations
@@ -35,6 +33,8 @@ The animated versions of the above figures are provided below, and can be reprod
 ### High Precision Weights, Normalized Threshold <img src="https://render.githubusercontent.com/render/math?math=\theta=1">
 
 This is the optimal baseline, showing that it is a reasonably straightforward task to achieve.
+
+<img src="https://user-images.githubusercontent.com/40262130/150855093-4cdaa55b-7cad-4d5a-b5fa-9e482c6fe07e.mp4" width="800">
 
 https://user-images.githubusercontent.com/40262130/150855093-4cdaa55b-7cad-4d5a-b5fa-9e482c6fe07e.mp4
 

@@ -24,7 +24,7 @@ To execute code, `cd` into one of four dataset directories, and then run `python
 # Temporal Coding
 Section 4 of the paper demonstrates the use of threshold annealing in a spike-timing task. A fully connected network of structure 100-1000-1 is used, where a Poisson spike train is pass at the input, and the output neuron is trained to spike at $t=75$ by linearly ramping up the membrane potential over time using a mean square error loss at each time step:
 
-![temporal_code](https://user-images.githubusercontent.com/40262130/150854145-d90d61ed-c41b-4aea-ad16-e077044f4f90.png)
+![temporal_code](https://user-images.githubusercontent.com/40262130/150854145-d90d61ed-c41b-4aea-ad16-e077044f4f90.png | width=200)
 
 The animated versions of the above figures are provided below, and can be reproduced in the corresponding notebook.
 
@@ -34,7 +34,7 @@ The animated versions of the above figures are provided below, and can be reprod
 
 This is the optimal baseline, showing that it is a reasonably straightforward task to achieve.
 
-![](https://user-images.githubusercontent.com/40262130/150855093-4cdaa55b-7cad-4d5a-b5fa-9e482c6fe07e.mp4 | width=100)
+https://user-images.githubusercontent.com/40262130/150855093-4cdaa55b-7cad-4d5a-b5fa-9e482c6fe07e.mp4
 
 ### Binarized Weights, Normalized Threshold <img src="https://render.githubusercontent.com/render/math?math=\theta=1">
 The results become significantly unstable when binarizing weights.

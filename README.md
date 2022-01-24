@@ -35,7 +35,7 @@ This is the optimal baseline, showing that it is a reasonably straightforward ta
 
 https://user-images.githubusercontent.com/40262130/150855093-4cdaa55b-7cad-4d5a-b5fa-9e482c6fe07e.mp4
 
-### Binarized Weights, Normalized Threshold $\theta=1$
+### Binarized Weights, Normalized Threshold $\\theta=1$
 The results become significantly unstable when binarizing weights.
 
 https://user-images.githubusercontent.com/40262130/150855727-9ccfcca2-8b48-48cc-b5df-0d17f367968c.mp4

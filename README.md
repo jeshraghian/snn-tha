@@ -1,5 +1,5 @@
 # Threshold Annealing in Spiking Neural Networks
-This repo contains the corresponding code from the paper *The Fine Line Between Dead Neurons and Sparsity in Binarized Spiking Neural Networks* by Jason K. Eshrahgian and Wei D. Lu.
+This repo contains the corresponding code from the paper *The Fine Line Between Dead Neurons and Sparsity in Binarized Spiking Neural Networks* by Jason K. Eshraghian and Wei D. Lu.
 
 
 ## Requirements

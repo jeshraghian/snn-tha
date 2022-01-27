@@ -1,5 +1,5 @@
 # Threshold Annealing in Spiking Neural Networks
-This repo contains the corresponding code from the paper *The Fine Line Between Dead Neurons and Sparsity in Binarized Spiking Neural Networks*. 
+This repo contains the corresponding code from the paper *The Fine Line Between Dead Neurons and Sparsity in Binarized Spiking Neural Networks* by Jason K. Eshrahgian and Wei D. Lu.
 
 
 ## Requirements
@@ -8,7 +8,7 @@ A working `Python` (≥3.6) interpreter and the `pip` package manager. All requi
 ```
 conda create -n snn-tha python=3.8
 conda activate snn-tha
-git clone XXX
+git clone https://github.com/jeshraghian/snn-tha.git
 cd snn-tha
 pip install -r requirements.txt
 ```

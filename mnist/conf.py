@@ -2,8 +2,8 @@ import torch
 
 config = {
         'exp_name' : 'mnist_tha',
-        'num_trials' : 5,  # crank it up if Optuna
-        'num_epochs' : 600,
+        'num_trials' : 5,
+        'num_epochs' : 500,
         'binarize' : True,
         'data_dir' : "~/data/mnist",
         'batch_size' : 128,
@@ -25,7 +25,7 @@ config = {
         'lr' : 9.97e-3,
         'slope': 10.22,
 
-        # threshold annealing: note - threshold1 is added to thr_final1
+        # threshold annealing. note: thr_final = threshold + thr_final
         'threshold1' : 11.666,
         'alpha_thr1' : 0.024,
         'thr_final1' : 4.317,

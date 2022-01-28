@@ -17,27 +17,25 @@ class Net(nn.Module):
 
         self.thr1 = config['threshold1']
         self.thr2 = config['threshold2']
-        slope1 = config['slope1']
-        beta1 = config['beta1']
+        slope = config['slope']
+        beta = config['beta']
         self.num_steps = config['num_steps']
         p1 = config['dropout1']
         p2 = config['dropout2']
         self.binarize = config['binarize']
         num_hidden = 3000
-
-        spike_grad1 = surrogate.fast_sigmoid(slope1)
-        spike_grad2 = surrogate.fast_sigmoid(slope2)
+        spike_grad = surrogate.fast_sigmoid(slope)
         # Initialize layers with spike operator
         
         
         self.bfc1 = BinaryLinear(700, num_hidden)
         self.fc1 = nn.Linear(700, num_hidden)
-        self.lif1 = snn.Leaky(beta1, threshold=self.thr1, spike_grad=spike_grad1)
+        self.lif1 = snn.Leaky(beta, threshold=self.thr1, spike_grad=spike_grad)
         self.dropout1 = nn.Dropout(p1)
         
         self.bfc2 = BinaryLinear(num_hidden, 20)
         self.fc2 = nn.Linear(num_hidden, 20)
-        self.lif2 = snn.Leaky(beta2, threshold=self.thr2, spike_grad=spike_grad2)
+        self.lif2 = snn.Leaky(beta, threshold=self.thr2, spike_grad=spike_grad)
         self.dropout2 = nn.Dropout(p2)
 
 

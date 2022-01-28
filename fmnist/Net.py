@@ -31,7 +31,7 @@ class Net(nn.Module):
         self.lif1 = snn.Leaky(beta, threshold=self.thr1, spike_grad=spike_grad)
         self.bconv2 = BinaryConv2d(16, 64, 5, bias=False)
         self.conv2 = nn.Conv2d(16, 64, 5, bias=False)
-        self.conv2_bn = nn.BatchNorm2d(c2)
+        self.conv2_bn = nn.BatchNorm2d(64)
         self.lif2 = snn.Leaky(beta, threshold=self.thr2, spike_grad=spike_grad)
         self.bfc1 = BinaryLinear(64 * 4 * 4, 10)
         self.fc1 = nn.Linear(64 * 4 * 4, 10)
@@ -53,8 +53,6 @@ class Net(nn.Module):
         if self.binarize:
 
             for step in range(self.num_steps):
-
-                # fc1weight = self.fc1.weight.data
                 cur1 = F.avg_pool2d(self.bconv1(x), 2)
                 if self.batch_norm:
                     cur1 = self.conv1_bn(cur1)
@@ -76,7 +74,6 @@ class Net(nn.Module):
 
             for step in range(self.num_steps):
 
-                # fc1weight = self.fc1.weight.data
                 cur1 = F.avg_pool2d(self.conv1(x), 2)
                 if self.batch_norm:
                     cur1 = self.conv1_bn(cur1)

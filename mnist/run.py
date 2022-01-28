@@ -20,7 +20,6 @@ from Net import *
 from test_acc import *
 from train import *
 from earlystopping import *
-from printer import *
 from conf import *
 
 ####################################################
@@ -87,7 +86,7 @@ for trial in range(config['num_trials']):
     trainloader = DataLoader(trainset, batch_size=int(config["batch_size"]), shuffle=True) 
     testloader = DataLoader(testset, batch_size=int(config["batch_size"]), shuffle=False)
 
-    print(f"=======Trial: {trial}, Batch: {config['batch_size']}, beta: {config['beta']:.3f}, threshold: {config['threshold']:.2f}, slope: {config['slope']}, lr: {config['lr']:.3e}======")
+    print(f"=======Trial: {trial}=======")
     
     for epoch in range(num_epochs):
 
@@ -101,9 +100,11 @@ for trial in range(config['num_trials']):
         print(f'Epoch: {epoch} \tTest Accuracy: {test_acc}')
 
         if config['df_lr']:
-            df_lr = df_lr.append(lr_list, ignore_index=True)
-        df_train_loss = df_train_loss.append(loss_list, ignore_index=True)
-        df_test_acc = df_test_acc.append({'epoch':epoch, 'test_acc':test_acc, 'train_time':epoch_time}, ignore_index=True)
+            df_lr = pd.concat([df_lr, pd.DataFrame(lr_list)])
+        df_train_loss = pd.concat([df_train_loss, pd.DataFrame(loss_list)])
+        test_data = pd.DataFrame([[epoch, test_acc, epoch_time]], columns = ['epoch', 'test_acc', 'train_time'])
+        df_test_acc = pd.concat([df_test_acc, test_data])
+        
         if SAVE_CSV:
             df_train_loss.to_csv('loss_' + csv_name, index=False)
             df_test_acc.to_csv('acc_' + csv_name, index=False)

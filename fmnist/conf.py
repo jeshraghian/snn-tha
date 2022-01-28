@@ -3,7 +3,7 @@ import torch
 config = {
         'exp_name' : 'fmnist_tha',
         'num_trials' : 5, 
-        'num_epochs' : 600,
+        'num_epochs' : 500,
         'binarize' : True,
         'data_dir' : "~/data/fmnist",
         'batch_size' : 128,
@@ -27,7 +27,7 @@ config = {
         'momentum' : 0.855,
         
 
-        # threshold annealing
+        # threshold annealing. note: thr_final = threshold + thr_final
         'threshold1' : 6.9,
         'alpha_thr1' : 0.0368,
         'thr_final1' : 7.1456,

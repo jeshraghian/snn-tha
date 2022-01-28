@@ -3,9 +3,9 @@ import torch
 config = {
         'exp_name' : 'shd_tha',
         'num_trials' : 5,  
-        'num_epochs' : 600,
+        'num_epochs' : 5,
         'binarize' : True,
-        'data_dir' : "/home/shd",
+        'data_dir' : "C:/Users/jeshr/Dropbox/repos/snntorch/dataset/shd", #"/home/shd",
         'batch_size' : 32,
         'seed' : 0,
         'num_workers' : 0,
@@ -22,12 +22,12 @@ config = {
         'batch_norm' : True,
         'dropout2' : 0.0176,
         'dropout1' : 0.186,
-        'beta1' : 0.950,
+        'beta' : 0.950,
         'lr' : 6.54e-4,
-        'slope1': 0.257,
+        'slope': 0.257,
 
 
-        # threshold annealing: threshold1 is added to thr_final1 for final result
+        # threshold annealing. note: thr_final = threshold + thr_final
         'threshold1' : 13.504,
         'alpha_thr1' : 2.78e-5,
         'thr_final1' : 31.767,

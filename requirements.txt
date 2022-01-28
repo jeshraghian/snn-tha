@@ -1,6 +1,6 @@
 torch
+torchvision
 snntorch
 pandas
-seaborn
 matplotlib
 numpy

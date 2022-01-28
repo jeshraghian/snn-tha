@@ -1,6 +1,20 @@
-# Threshold Annealing in Spiking Neural Networks
-This repo contains the corresponding code from the paper *The Fine Line Between Dead Neurons and Sparsity in Binarized Spiking Neural Networks* by Jason K. Eshraghian and Wei D. Lu.
+# Threshold Annealing in Binarized Spiking Neural Networks
 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/40262130/151521527-773468ee-9c47-4217-986a-31d4cf568526.gif" alt="animated" width="450" />
+</p>
+
+This repo contains the corresponding code from the paper [Jason K. Eshraghian and Wei D. Lu “The fine line between dead neurons and sparsity in binarized spiking neural networks”. arXiv preprint arXiv:2109.12894, January 2022.](https://arxiv.org/abs/2109.12894) The bibtex entry is provided below:
+
+```
+@article{eshraghian2022fine,
+  title={{The fine line between dead neurons and sparsity in binarized spiking neural networks}},
+  author={Eshraghian, Jason K and Lu, Wei D},
+  year={2022},
+  eprint={2004.10971},
+  archivePrefix={arXiv},
+}
+```
 
 ## Requirements
 A working `Python` (≥3.6) interpreter and the `pip` package manager. All required libraries and packages can be installed using  `pip install -r requirements.txt`. To avoid potential package conflicts, the use of a `conda` environment is recommended. The following commands can be used to create and activate a separate `conda` environment, clone this repository, and to install all dependencies:
@@ -11,6 +25,21 @@ conda activate snn-tha
 git clone https://github.com/jeshraghian/snn-tha.git
 cd snn-tha
 pip install -r requirements.txt
+```
+
+## Citation 
+Our implementation of threshold annealing is done using [snnTorch](https://github.com/jeshraghian/snntorch):
+
+
+```
+@article{eshraghian2021training,
+  title={Training spiking neural networks using lessons from deep learning},
+  author={Eshraghian, Jason K and Ward, Max and Neftci, Emre and Wang, Xinxin 
+  and Lenz, Gregor and Dwivedi, Girish and Bennamoun, Mohammed and Jeong, Doo Seok 
+  and Lu, Wei D},
+  journal={arXiv preprint arXiv:2109.12894},
+  year={2021}
+  }
 ```
 
 ## Code Execution

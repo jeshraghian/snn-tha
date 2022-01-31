@@ -1,6 +1,20 @@
-# Threshold Annealing in Spiking Neural Networks
-This repo contains the corresponding code from the paper *The Fine Line Between Dead Neurons and Sparsity in Binarized Spiking Neural Networks* by Jason K. Eshraghian and Wei D. Lu.
+# Threshold Annealing in Binarized Spiking Neural Networks
 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/40262130/151521527-773468ee-9c47-4217-986a-31d4cf568526.gif" alt="animated" width="450" />
+</p>
+
+This repo contains the corresponding code from the paper [Jason K. Eshraghian and Wei D. Lu “The fine line between dead neurons and sparsity in binarized spiking neural networks”. arXiv preprint arXiv:2201.11915, January 2022.](http://arxiv.org/abs/2201.11915) The bibtex entry is provided below:
+
+```
+@article{eshraghian2022fine,
+  title={{The fine line between dead neurons and sparsity in binarized spiking neural networks}},
+  author={Eshraghian, Jason K and Lu, Wei D},
+  year={2022},
+  eprint={2201.11915},
+  archivePrefix={arXiv},
+}
+```
 
 ## Requirements
 A working `Python` (≥3.6) interpreter and the `pip` package manager. All required libraries and packages can be installed using  `pip install -r requirements.txt`. To avoid potential package conflicts, the use of a `conda` environment is recommended. The following commands can be used to create and activate a separate `conda` environment, clone this repository, and to install all dependencies:
@@ -13,16 +27,31 @@ cd snn-tha
 pip install -r requirements.txt
 ```
 
+## Citation 
+Our implementation of threshold annealing is done using [snnTorch](https://github.com/jeshraghian/snntorch):
+
+
+```
+@article{eshraghian2021training,
+  title={Training spiking neural networks using lessons from deep learning},
+  author={Eshraghian, Jason K and Ward, Max and Neftci, Emre and Wang, Xinxin 
+  and Lenz, Gregor and Dwivedi, Girish and Bennamoun, Mohammed and Jeong, Doo Seok 
+  and Lu, Wei D},
+  journal={arXiv preprint arXiv:2109.12894},
+  year={2021}
+  }
+```
+
 ## Code Execution
 To execute code, `cd` into one of four dataset directories, and then run `python run.py`. 
 
 ## Hyperparameter Tuning
-* In each directory, `conf.py` defines all configuration parameters and hyperparameters for each dataset. The default parameters in this repo are identical to those for the high precision case reported in the corresponding paper.
-* To run binarized networks, set `"binarize" : True"` in `conf.py`. For optimized parameters, follow the values reported in the paper (to be linked upon completion of the double blind peer review process.)
+* In each directory, `conf.py` defines all configuration parameters and hyperparameters for each dataset. The default parameters in this repo are identical to those for the binarized case with threshold annealing as reported in the corresponding paper.
+* To run binarized networks, set `"binarize" : True"` in `conf.py`. For optimized parameters, follow the values reported in the paper.
 
 
 # Temporal Coding
-Section 4 of the paper demonstrates the use of threshold annealing in a spike-timing task. A fully connected network of structure 100-1000-1 is used, where a Poisson spike train is pass at the input, and the output neuron is trained to spike at <img src="https://render.githubusercontent.com/render/math?math=t=75"> by linearly ramping up the membrane potential over time using a mean square error loss at each time step:
+Section 4 of the paper demonstrates the use of threshold annealing in a spike-timing task. A fully connected network of structure 100-1000-1 is used, where a Poisson spike train is passed at the input, and the output neuron is trained to spike at <img src="https://render.githubusercontent.com/render/math?math=t=75"> by linearly ramping up the membrane potential over time using a mean square error loss at each time step:
 
 <img src="https://user-images.githubusercontent.com/40262130/150854145-d90d61ed-c41b-4aea-ad16-e077044f4f90.png" width="700">
 

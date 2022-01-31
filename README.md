@@ -4,14 +4,14 @@
   <img src="https://user-images.githubusercontent.com/40262130/151521527-773468ee-9c47-4217-986a-31d4cf568526.gif" alt="animated" width="450" />
 </p>
 
-This repo contains the corresponding code from the paper [Jason K. Eshraghian and Wei D. Lu “The fine line between dead neurons and sparsity in binarized spiking neural networks”. arXiv preprint arXiv:2109.12894, January 2022.](https://arxiv.org/abs/2109.12894) The bibtex entry is provided below:
+This repo contains the corresponding code from the paper [Jason K. Eshraghian and Wei D. Lu “The fine line between dead neurons and sparsity in binarized spiking neural networks”. arXiv preprint arXiv:2201.11915, January 2022.](http://arxiv.org/abs/2201.11915) The bibtex entry is provided below:
 
 ```
 @article{eshraghian2022fine,
   title={{The fine line between dead neurons and sparsity in binarized spiking neural networks}},
   author={Eshraghian, Jason K and Lu, Wei D},
   year={2022},
-  eprint={2004.10971},
+  eprint={2201.11915},
   archivePrefix={arXiv},
 }
 ```

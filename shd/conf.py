@@ -5,7 +5,7 @@ config = {
         'num_trials' : 5,  
         'num_epochs' : 5,
         'binarize' : True,
-        'data_dir' : "C:/Users/jeshr/Dropbox/repos/snntorch/dataset/shd", #"/home/shd",
+        'data_dir' : "/home/shd",
         'batch_size' : 32,
         'seed' : 0,
         'num_workers' : 0,

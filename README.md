@@ -46,12 +46,12 @@ Our implementation of threshold annealing is done using [snnTorch](https://githu
 To execute code, `cd` into one of four dataset directories, and then run `python run.py`. 
 
 ## Hyperparameter Tuning
-* In each directory, `conf.py` defines all configuration parameters and hyperparameters for each dataset. The default parameters in this repo are identical to those for the high precision case reported in the corresponding paper.
-* To run binarized networks, set `"binarize" : True"` in `conf.py`. For optimized parameters, follow the values reported in the paper (to be linked upon completion of the double blind peer review process.)
+* In each directory, `conf.py` defines all configuration parameters and hyperparameters for each dataset. The default parameters in this repo are identical to those for the binarized case with threshold annealing as reported in the corresponding paper.
+* To run binarized networks, set `"binarize" : True"` in `conf.py`. For optimized parameters, follow the values reported in the paper.
 
 
 # Temporal Coding
-Section 4 of the paper demonstrates the use of threshold annealing in a spike-timing task. A fully connected network of structure 100-1000-1 is used, where a Poisson spike train is pass at the input, and the output neuron is trained to spike at <img src="https://render.githubusercontent.com/render/math?math=t=75"> by linearly ramping up the membrane potential over time using a mean square error loss at each time step:
+Section 4 of the paper demonstrates the use of threshold annealing in a spike-timing task. A fully connected network of structure 100-1000-1 is used, where a Poisson spike train is passed at the input, and the output neuron is trained to spike at <img src="https://render.githubusercontent.com/render/math?math=t=75"> by linearly ramping up the membrane potential over time using a mean square error loss at each time step:
 
 <img src="https://user-images.githubusercontent.com/40262130/150854145-d90d61ed-c41b-4aea-ad16-e077044f4f90.png" width="700">
 

@@ -27,21 +27,6 @@ cd snn-tha
 pip install -r requirements.txt
 ```
 
-## Citation 
-Our implementation of threshold annealing is done using [snnTorch](https://github.com/jeshraghian/snntorch):
-
-
-```
-@article{eshraghian2021training,
-  title={Training spiking neural networks using lessons from deep learning},
-  author={Eshraghian, Jason K and Ward, Max and Neftci, Emre and Wang, Xinxin 
-  and Lenz, Gregor and Dwivedi, Girish and Bennamoun, Mohammed and Jeong, Doo Seok 
-  and Lu, Wei D},
-  journal={arXiv preprint arXiv:2109.12894},
-  year={2021}
-  }
-```
-
 ## Code Execution
 To execute code, `cd` into one of four dataset directories, and then run `python run.py`. 
 

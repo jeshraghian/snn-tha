@@ -1,4 +1,4 @@
-# Threshold Annealing in Binarized Spiking Neural Networks
+# Bounded Homeostasis in Binarized Spiking Neural Networks
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/40262130/151521527-773468ee-9c47-4217-986a-31d4cf568526.gif" alt="animated" width="450" />

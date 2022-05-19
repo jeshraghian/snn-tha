@@ -1,6 +1,6 @@
 # Bounded Homeostasis in Binarized Spiking Neural Networks
 
-<p align="center">
+<!-- <p align="center">
   <img src="https://user-images.githubusercontent.com/40262130/151521527-773468ee-9c47-4217-986a-31d4cf568526.gif" alt="animated" width="450" />
 </p>
 
@@ -14,7 +14,7 @@ This repo contains the corresponding code from the paper [Jason K. Eshraghian an
   eprint={2201.11915},
   archivePrefix={arXiv},
 }
-```
+``` -->
 
 ## Requirements
 A working `Python` (≥3.6) interpreter and the `pip` package manager. All required libraries and packages can be installed using  `pip install -r requirements.txt`. To avoid potential package conflicts, the use of a `conda` environment is recommended. The following commands can be used to create and activate a separate `conda` environment, clone this repository, and to install all dependencies:
